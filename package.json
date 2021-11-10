@@ -1,44 +1,47 @@
 {
-  "name": "express-react-tailwind",
-  "version": "1.0.0",
-  "description": "React, Express, TailwindCSS boilerplate to start creating projects fast with this stack.",
-  "main": "./server/server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rahel-muhammad/express-react-tailwind.git"
-  },
-  "keywords": [
-    "reactjs",
-    "react",
-    "express",
-    "tailwindcss",
-    "tailwind",
-    "boilerplate"
-  ],
-  "author": "Rahel Muhammad <rahelmuhammad@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rahel-muhammad/express-react-tailwind/issues"
-  },
-  "homepage": "https://github.com/rahel-muhammad/express-react-tailwind#readme",
-  "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "concurrently": "^6.3.0",
-    "cssnano": "^5.0.10",
-    "nodemon": "^2.0.15",
-    "parcel-bundler": "^1.12.5",
-    "postcss": "^8.3.11",
-    "postcss-cli": "^9.0.2",
-    "postcss-import": "^14.0.2",
-    "tailwindcss": "^2.2.19"
-  },
-  "dependencies": {
-    "cross-env": "^7.0.3",
-    "express": "^4.17.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  }
+    "name": "express-react-tailwind",
+    "version": "1.0.0",
+    "description": "React, Express, TailwindCSS boilerplate to start creating projects fast with this stack.",
+    "main": "./server/server.js",
+    "scripts": {
+        "create-tailwind": "postcss ./client/styles.css -o ./public/styles/styles.css",
+        "watch-js": "cross-env NODE_ENV=development parcel watch ./client/index.js --out-dir ./public/scripts",
+        "watch-server": "cross-env NODE_ENV=development nodemon ./server/server.js",
+        "start": "concurrently \"npm:watch-*\" \"npm:create-tailwind\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rahel-muhammad/express-react-tailwind.git"
+    },
+    "keywords": [
+        "reactjs",
+        "react",
+        "express",
+        "tailwindcss",
+        "tailwind",
+        "boilerplate"
+    ],
+    "author": "Rahel Muhammad <rahelmuhammad@gmail.com>",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/rahel-muhammad/express-react-tailwind/issues"
+    },
+    "homepage": "https://github.com/rahel-muhammad/express-react-tailwind#readme",
+    "devDependencies": {
+        "autoprefixer": "^10.4.0",
+        "concurrently": "^6.3.0",
+        "cssnano": "^5.0.10",
+        "nodemon": "^2.0.15",
+        "parcel-bundler": "^1.12.5",
+        "postcss": "^8.3.11",
+        "postcss-cli": "^9.0.2",
+        "postcss-import": "^14.0.2",
+        "tailwindcss": "^2.2.19"
+    },
+    "dependencies": {
+        "cross-env": "^7.0.3",
+        "express": "^4.17.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    }
 }

@@ -4,6 +4,10 @@ const express = require('express');
 const app = express();
 const pathToPublic = path.resolve(__dirname, '..', 'public');
 
+// middleware
+app.use(express.json());
+app.use(express.static(pathToPublic));
+
 // API routes
 app.get('/api/some-data', (req, res, next) => {
     res.send({

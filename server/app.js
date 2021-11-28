@@ -2,7 +2,10 @@ const path = require('path');
 const express = require('express');
 
 const app = express();
-const pathToPublic = path.resolve(__dirname, '..', 'public');
+const pathToPublic = path.resolve(__dirname, '..', 'client', 'public');
+const pathToBuild = path.resolve(__dirname, '..', 'client', 'build');
+
+const isDev = process.env.NODE_ENV.trim() === 'development';
 
 // middleware
 app.use(express.json());
@@ -15,9 +18,9 @@ app.get('/api/some-data', (req, res, next) => {
     });
 });
 
-// send react client
+// send react clients
 app.get('*', (req, res, next) => {
-    res.sendFile(pathToPublic + '/index.html');
+    res.sendFile((isDev ? pathToPublic : pathToBuild) + '/index.html');
 });
 
 // global error handler

@@ -1,0 +1,28 @@
+{
+    "name": "express-react-tailwind",
+    "version": "1.0.0",
+    "description": "Simple boilerplate for react, tailwindcss and express tech stack",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "react",
+        "tailwindcss",
+        "express",
+        "boilerplate"
+    ],
+    "author": "rahel-muhammad",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rahel-muhammad/express-react-tailwind.git"
+    },
+    "bugs": {
+        "url": "https://github.com/rahel-muhammad/express-react-tailwind/issues"
+    },
+    "homepage": "https://github.com/rahel-muhammad/express-react-tailwind#readme",
+    "dependencies": {
+        "concurrently": "^6.4.0"
+    }
+}

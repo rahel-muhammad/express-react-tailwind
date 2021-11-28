@@ -4,7 +4,9 @@
     "description": "Simple boilerplate for react, tailwindcss and express tech stack",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "client": "cd client && npm start",
+        "server": "cd server && npm start",
+        "start": "concurrently \"npm:client\" \"npm:server\""
     },
     "keywords": [
         "react",

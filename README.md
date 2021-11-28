@@ -7,4 +7,4 @@ After installing dependencies, run `npm start` in root directory, this will:
 -   Open default browser at port 3000 to start developing with react
 
 Please note if you change 3500 port in server/server.js be sure  
-to also update "proxy" in client/package.json
+to also update "proxy" in client/package.json (development)
